@@ -19,3 +19,8 @@ Cons: May require manual cleanup if the formatting isn't preserved correctly.
 If none of the automated methods work, you can open the PDF in a viewer and manually transcribe the data.
 Pros: Ensures accuracy.
 Cons: Time-consuming.
+
+
+If the Bill of Materials is embedded as an image (e.g., if the document is a scanned document or contains CAD drawings that are images), you will need to convert the PDF pages to images in order to perform OCR (Optical Character Recognition).
+Why you would need to convert to an image: In this case, the text is not stored in the PDF's text layer. Instead, it's part of an image, and OCR tools (like Tesseract) need to be applied to the image to extract the text.
+Cropping before OCR: Cropping is important here because OCR tools will attempt to read the entire image, but you might not want to perform OCR on unnecessary parts like the CAD drawing. By cropping the image to the specific area containing the Bill of Materials, you reduce the OCR processing time and avoid extracting irrelevant content.
